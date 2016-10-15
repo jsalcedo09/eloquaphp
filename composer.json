@@ -1,0 +1,15 @@
+{
+  "name": "eloquaphp",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Jorge Salcedo",
+      "email": "jorgesalcedo@qdata.io",
+      "homepage": "https://github.com/jsalcedo09",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "league/oauth2-client": "^1.4.2"
+  }
+}

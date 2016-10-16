@@ -13,6 +13,6 @@
     "league/oauth2-client": "^1.4.2"
   },
   "autoload": {
-    "psr-4": { "EloquaApi": "/" }
+    "psr-4": { "EloquaApi\\": "/" }
   }
 }

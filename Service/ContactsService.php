@@ -1,7 +1,7 @@
 <?php
 namespace EloquaApi\Service;
 
-class ContactFieldsService extends AbstractService
+class ContactsService extends AbstractService
 {
     /**
      * Returns all campaigns

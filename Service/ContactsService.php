@@ -19,7 +19,7 @@ class ContactsService extends AbstractService
     public function search($value, $term='', $operator='', $options=[]) {
         $search = $value;
         if(!empty($term) && !empty($operator)){
-            $search = "[".$term.$operator."]".$search;
+            $search = $term.$operator.$search;
         }
         $options = array_merge($options, array(
             'search'=>$search

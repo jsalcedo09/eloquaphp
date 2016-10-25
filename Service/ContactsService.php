@@ -16,6 +16,13 @@ class ContactsService extends AbstractService
 
     }
 
+    /**
+    *  Create Contact  
+    */
+    public function create( $options = array() ) {
+        return $this->client->request( '/api/REST/1.0/data/contact', 'post', $options );
+    }
+
     public function search($value, $term='', $operator='', $options=[]) {
         $search = $value;
         if(!empty($term) && !empty($operator)){

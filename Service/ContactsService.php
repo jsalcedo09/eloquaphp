@@ -42,5 +42,16 @@ class ContactsService extends AbstractService
 
     }
 
+    public function contactInList($contact_id, $list_id) {
+
+        $lists = $this->client->request( '/api/REST/2.0/data/contact/'.$contact_id.'/membership', 'get');
+        foreach($lists as $list){
+            if($list->id == trim("".$list_id)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }

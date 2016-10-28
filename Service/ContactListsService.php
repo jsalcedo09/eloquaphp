@@ -21,4 +21,15 @@ class ContactListsService extends AbstractService
         return $this->client->request( '/api/REST/1.0/assets/contact/lists', 'put', $options );
 
     }
+
+    public function search($value, $term='', $operator='', $options=[]) {
+        $search = $value;
+        if(!empty($term) && !empty($operator)){
+            $search = $term.$operator.$search;
+        }
+        $options = array_merge($options, array(
+            'search'=>$search
+        ));
+        return $this->all($options);
+    }
 }

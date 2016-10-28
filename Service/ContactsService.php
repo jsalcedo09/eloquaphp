@@ -27,4 +27,13 @@ class ContactsService extends AbstractService
         return $this->all($options);
     }
 
+    public function update($id, $contact = array(), $options = array() ) {
+
+        $options = array_merge($contact, $options);
+
+        return $this->client->request( '/api/REST/1.0/data/contact/'.$id, 'get', $options );
+
+    }
+
+
 }

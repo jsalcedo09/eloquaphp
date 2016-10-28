@@ -3,7 +3,7 @@
 namespace EloquaApi\Service;
 
 
-class ContactLists extends AbstractService
+class ContactListsService extends AbstractService
 {
     public function all( $options = array() ) {
 

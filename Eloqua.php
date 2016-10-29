@@ -220,6 +220,7 @@ class Eloqua {
 				}
 				break;
 			case 'post' :
+			case 'put' :
 				if ( ! empty( $data ) ) {
 					$json = array();
 					foreach ( $data as $key => $value ) {

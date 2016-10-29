@@ -20,7 +20,7 @@ class ValidationExceptionHandler {
 		$error_slug = ucwords( $this->error->code, '_' );
 		$exception_class = str_replace( "_", "", $error_slug );
 		$exception_class = $exception_class . 'Exception';
-		$class = '\\AwesomeMotive\\Eloqua\\Exception\\' . $exception_class;
+		$class = '\\EloquaApi\\Exception\\' . $exception_class;
 
 		if ( class_exists( $class ) ) {
 			throw new $class( $this->error->message );

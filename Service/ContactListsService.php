@@ -11,9 +11,11 @@ class ContactListsService extends AbstractService
 
     }
 
-    public function addContacts($id, $contact_ids = array(), $options = array() ) {
+    public function addContacts($id, $name, $contact_ids = array(), $options = array() ) {
 
         $options = array_merge($options, array(
+            "id"=>$id,
+            "name"=>$name,
             "membershipAdditions" => $contact_ids
         ));
 

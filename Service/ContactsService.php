@@ -36,9 +36,9 @@ class ContactsService extends AbstractService
 
     public function update($id, $contact = array(), $options = array() ) {
 
+        $contact = array_merge($contact, array("id"=>$id));
         $options = array_merge($contact, $options);
-
-        return $this->client->request( '/api/REST/1.0/data/contact/'.$id, 'get', $options );
+        return $this->client->request( '/api/REST/1.0/data/contact/'.$id, 'put', $options );
 
     }
 

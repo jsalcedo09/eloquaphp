@@ -23,6 +23,7 @@ class EmailDeploymentService extends AbstractService
         );
         $options["email"] = array(
             "id"=>$emailId,
+            "name"=>$name
         );
         return $this->create(true, $options);
     }
